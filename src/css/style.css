@@ -1,0 +1,260 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: #111;
+
+
+}
+h1,h3{
+    font-weight: 400;
+}
+.weather-app{
+    min-height: 100vh;
+    background-image: url("https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    position: relative;
+    transition: 500ms;
+}
+.weather-app::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.3);
+    z-index: 0;
+}
+.container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 2em 3em 4em 3em ;
+}
+.container > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.city-time,
+.temp,
+.weather{
+    margin: 0 1em;
+}
+.city-time h1{
+    margin: 0;
+    margin-bottom: 0.2em;
+    font-size: 3em;
+}
+.temp{
+    font-size: 7em;
+    margin: 0;
+}
+.weather img{
+    display: block;
+    margin: 0.5em 0;
+}
+.LoginApp{
+    background-color: rgb(0, 0, 0);
+
+    background-image: url("https://i.gifer.com/9WdJ.gif");
+    /* background-image: url("https://pbs.twimg.com/media/EXWN7NJUEAAarz4.jpg:large"); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+.LoginApp::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.3);
+    z-index: 0;
+}
+.LoginBox{
+    width: 450px;
+    height: 450px;
+    margin: 0 20px;
+   border-radius: 20px;
+
+   background: rgba(179, 179, 179, 0.308);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(3px);
+-webkit-backdrop-filter: blur(3.5px);
+border: 1px solid rgba(255, 255, 255, 0.09);
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+gap: 15px;
+
+}
+.LoginBox > h2{
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+}
+.LoginBox > span{
+    font-weight: 600;
+    font-size: large;
+}
+.LoginBox > input{
+    padding: 12px 20px;
+    margin: 8px 100px 8px 100px;
+    box-sizing: border-box;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    border-radius: 8px;
+    width: 90%;
+    border: 2px solid #ccc;
+    font-size: 14px;
+
+}
+input:focus{
+    border: 2px solid #555;
+
+
+}
+.LoginBox > button{
+    width: 50%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #555;
+
+    background-color: transparent;
+    cursor: pointer;
+    color: black;
+    font-size: large;
+    font-weight: bold;
+    transition: 0.5s all;
+
+}
+.LoginBox > button:hover{
+    background-color: #555;
+    color: aliceblue;
+    border: 1px solid transparent;
+}
+
+.panel{
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: rgba(110, 110, 110, 0.25);
+    box-shadow: 0px 8px 32px 0 rgb(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    z-index: 1;
+    padding: 3em 2em;
+}
+.panel form{
+    margin-bottom: 3em;
+}
+.submit{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1.5em;
+    margin: 0;
+    border: none;
+    outline: none;
+    background-color: #fa6d1b;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: 0.4s;
+
+}
+.submit:hover{
+    background: #fff !important;
+}
+.search{
+    background: none;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding: 0 1em 0.5em 0;
+    width: 80%;
+    color: #fff;
+    font-size: 1.1em;
+
+}
+.search:focus{
+    outline: none;
+}
+.search::placeholder{
+    color: #ccc;
+}
+.panel ul{
+    padding: 0 0 1em 0;
+    margin:  2em 0;
+    border-bottom:  1px solid #ccc;
+}
+.panel ul li{
+    color: #ccc;
+    margin: 2.5em;
+}
+.panel ul h4{
+    margin: 3em 0;
+}
+.city{
+    display: block;
+    cursor: pointer;
+}
+.city:hover{
+    color: #fff;
+}
+.details li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.containerBox{
+    flex-wrap: wrap;
+    margin-right: 10px;
+    border-radius: 20px;
+}
+.containerBox > div{
+    border: 1px solid;
+    margin: 2.5em;
+}
+@media screen and (max-width: 800px){
+    .panel, .container{
+       position: relative;
+       width: 100%;
+       top: initial;
+       bottom: 0;
+    }
+}
+@media screen and (max-width: 500px){
+    html{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 300px){
+    .weather-app{
+        min-height: 40em;
+    }
+}
